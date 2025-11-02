@@ -1,8 +1,8 @@
-FROM debian:jessie
+FROM debian:bookworm
 
 EXPOSE 749 88/udp
 
-ENV DEBIAN_FRONTEND noninteractive
+ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get -qq update
 RUN apt-get -qq install locales krb5-kdc krb5-admin-server
 RUN apt-get -qq install vim 
